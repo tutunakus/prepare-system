@@ -12,7 +12,7 @@ GENTOO=Gentoo
 CENTOS=Centos
 UBUNTU=Ubuntu
 
-function fedo {
+function fedo {						# if you use fedora
 	SOFT_LIST=$UNI_SOFT+$DESK_LIST
 	echo "somethink for fedora"
 	yum -y localinstall --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
@@ -20,38 +20,33 @@ function fedo {
 
 }
 
-function gent {
+function gent {						# if you use gentoo
 	echo "somethink for gentoo"
 }
 
-function cent {
+function cent {						# if you use centos
 	echo "somethink for centos"
 }
 
-function ubun {
+function ubun {						# if you use ubuntu
 	echo "somethink for ubuntu"
 }
 
-function errd {
+function errd {						# if distr no in list
 	echo "What are you use?"
 }
 
-#######################################
-############ main function ############
-#######################################
 
-function main {
-	case $NAME in
-		"$FEDORA" ) fedo ;;
-		"$GENTOO" ) gent ;;
-		"$CENTOS" ) cent ;;
-		"$UBUNTU" ) ubun ;;
-		*	  ) errd ;;
-	esac
-}
-
-if [ -a $OS_RELEASE ]; then 				# start script
-	main
+			
+if [ -a $OS_RELEASE ]; then				# script start
+	        case $NAME in
+			"$FEDORA" ) fedo ;;
+			"$GENTOO" ) gent ;;
+			"$CENTOS" ) cent ;;
+			"$UBUNTU" ) ubun ;;
+			*         ) errd ;;
+		esac
 else
 	echo "File /etc/os-releae didn't found"
 fi
+
