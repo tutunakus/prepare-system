@@ -3,7 +3,7 @@
 . /etc/os-release		# include file for define distributive OS
 
 # list variables with software
-SOFT_LIST="vim htop mc openvpn"
+SOFT_LIST="vim htop mc openvpn wget"
 DESK_LIST="moc libreoffice dropbox yandex-disk"
 
 # list variables with of distribution names
