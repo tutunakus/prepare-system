@@ -24,10 +24,14 @@ function ubun {
 	echo "somethink for ubuntu"
 }
 
+function errd {
+	echo "What are you use?"
+}
 case $NAME in
 	"$FEDORA" ) fedo ;;
 	"$GENTOO" ) gent ;;
 	"$CENTOS" ) cent ;;
 	"$UBUNTU" ) ubun ;;
+	*	  ) errd ;;
 esac
 
