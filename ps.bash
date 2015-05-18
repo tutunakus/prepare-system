@@ -4,7 +4,7 @@ OS_RELEASE=/etc/os-release				# include file for define distributive OS
 
 # list variables with software
 UNI_SOFT="vim htop mc openvpn wget"			# universal soft list for all type installation
-DESK_LIST="moc libreoffice dropbox yandex-disk"		# software for desktop installation
+DESK_LIST="moc libreoffice dropbox yandex-disk anki cherrytree"		# software for desktop installation
 
 # list variables with of distribution names
 FEDORA=Fedora
@@ -49,4 +49,4 @@ if [ -a $OS_RELEASE ]; then				# script start
 else
 	echo "File /etc/os-releae didn't found"
 fi
-
+                                                                                   
