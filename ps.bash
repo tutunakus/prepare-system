@@ -7,10 +7,10 @@ UNI_SOFT="vim htop mc openvpn wget"			# universal soft list for all type install
 DESK_LIST="moc libreoffice dropbox yandex-disk anki cherrytree keepass"		# software for desktop installation
 
 # list variables with of distribution names
-FEDORA=Fedora
-GENTOO=Gentoo
-CENTOS=Centos
-UBUNTU=Ubuntu
+FEDORA=fedora
+GENTOO=gentoo
+CENTOS=centos
+UBUNTU=ubuntu
 
 function fedo {						# if you use fedora
 	SOFT_LIST=$UNI_SOFT+$DESK_LIST
@@ -41,7 +41,7 @@ function errd {						# if distr no in list
 
 			
 if [ -a $OS_RELEASE ]; then				# script start
-	        case $NAME in
+	        case $ID in
 			"$FEDORA" ) fedo ;;
 			"$GENTOO" ) gent ;;
 			"$CENTOS" ) cent ;;
