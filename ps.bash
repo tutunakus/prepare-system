@@ -28,6 +28,7 @@ function cent {						# if you use centos
 	echo "somethink for centos"
 	SOFT_LIST=$UNI_SOFT
 	yum install epel-release -y
+	yum install -y $SOFT_LIST
 }
 
 function ubun {						# if you use ubuntu
