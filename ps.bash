@@ -26,6 +26,8 @@ function gent {						# if you use gentoo
 
 function cent {						# if you use centos
 	echo "somethink for centos"
+	SOFT_LIST=$UNI_SOFT
+	yum install epel-release -y
 }
 
 function ubun {						# if you use ubuntu
