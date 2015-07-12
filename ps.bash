@@ -42,7 +42,8 @@ function errd {						# if distr no in list
 
 			
 if [ -a $OS_RELEASE ]; then				# script start
-	        case $ID in
+	        . $OS_RELEASE
+		case $ID in
 			"$FEDORA" ) fedo ;;
 			"$GENTOO" ) gent ;;
 			"$CENTOS" ) cent ;;
