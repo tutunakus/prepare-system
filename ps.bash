@@ -3,7 +3,7 @@
 OS_RELEASE=/etc/os-release				# include file for define distributive OS
 
 # list variables with software
-UNI_SOFT="vim htop mc openvpn wget net-tools"			# universal soft list for all type installation
+UNI_SOFT="vim htop mc openvpn wget net-tools screen"			# universal soft list for all type installation
 DESK_LIST="moc libreoffice dropbox yandex-disk anki cherrytree keepass"		# software for desktop installation
 
 # list variables with of distribution names
