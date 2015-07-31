@@ -3,8 +3,19 @@
 OS_RELEASE=/etc/os-release				# include file for define distributive OS
 
 # list variables with software
-UNI_SOFT="vim htop mc openvpn wget net-tools screen"			# universal soft list for all type installation
-DESK_LIST="moc libreoffice dropbox yandex-disk anki cherrytree keepass"		# software for desktop installation
+UNI_SOFT="vim \
+	  htop \
+	  mc \
+	  openvpn \
+	  wget net-tools screen" # universal soft list for all type installation
+
+DESK_LIST="moc \
+	   libreoffice \
+	   dropbox \
+	   yandex-disk \
+	   anki \
+	   cherrytree \
+	   keepass"		# software for desktop installation
 
 # list variables with of distribution names
 FEDORA=fedora
@@ -15,7 +26,9 @@ UBUNTU=ubuntu
 function fedo {						# if you use fedora
 	SOFT_LIST=$UNI_SOFT+$DESK_LIST
 	echo "somethink for fedora"
-	yum -y localinstall --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+	yum -y localinstall \
+	--nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
+	http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 	yum -y install $SOFT_LIST
 
 }
