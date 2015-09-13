@@ -26,7 +26,7 @@ CENTOS=centos
 UBUNTU=ubuntu
 
 function fedo {						# if you use fedora
-	SOFT_LIST=$UNI_SOFT+$DESK_LIST+$RHEL_LIST
+	SOFT_LIST=$UNI_SOFT" "$DESK_LIST" "$RHEL_LIST
 	echo "somethink for fedora"
 	yum -y localinstall \
 	--nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
@@ -41,7 +41,7 @@ function gent {						# if you use gentoo
 
 function cent {						# if you use centos
 	echo "somethink for centos"
-	SOFT_LIST=$UNI_SOFT+$RHEL_LIST
+	SOFT_LIST=$UNI_SOFT" "$RHEL_LIST
 	yum update -y
 	yum install epel-release -y
 	yum install -y $SOFT_LIST
