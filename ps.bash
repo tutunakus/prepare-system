@@ -7,7 +7,8 @@ UNI_SOFT="vim \
 	  htop \
 	  mc \
 	  openvpn \
-	  wget net-tools screen" # universal soft list for all type installation
+	  wget net-tools screen \
+          tmux" # universal soft list for all type installation
 
 DESK_LIST="moc \
 	   libreoffice \
