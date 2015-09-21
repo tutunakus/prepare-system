@@ -30,7 +30,8 @@ function fedo {						# if you use fedora
 	SOFT_LIST=$UNI_SOFT" "$DESK_LIST" "$RHEL_LIST
 	echo "somethink for fedora"
 	yum -y localinstall \
-	--nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
+	--nogpgcheck \
+	http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
 	http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 	yum -y install $SOFT_LIST
 
@@ -69,5 +70,4 @@ if [ -a $OS_RELEASE ]; then				# script start
 		esac
 else
 	echo "File /etc/os-releae didn't found"
-fi
-                                                                                   
+fi                                                                                  
