@@ -32,6 +32,10 @@ function hostname_change {
 	hostnamectl set-hostname $HOST_NAME
 }
 
+function configure_utils {
+	cp ./.vimrc ~/
+}
+
 function fedo {						# if you use fedora
 	hostname_change
 	SOFT_LIST=$UNI_SOFT" "$DESK_LIST" "$RHEL_LIST
@@ -41,7 +45,7 @@ function fedo {						# if you use fedora
 	http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
 	http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 	yum -y install $SOFT_LIST
-
+	configure_utils
 }
 
 function gent {						# if you use gentoo
@@ -55,7 +59,9 @@ function cent {						# if you use centos
 	yum update -y
 	yum install epel-release -y
 	yum install -y $SOFT_LIST
+	configure_utils
 }
+
 
 function ubun {						# if you use ubuntu
 	echo "somethink for ubuntu"
