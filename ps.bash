@@ -49,6 +49,7 @@ function gent {						# if you use gentoo
 }
 
 function cent {						# if you use centos
+	hostname_change
 	echo "somethink for centos"
 	SOFT_LIST=$UNI_SOFT" "$RHEL_LIST
 	yum update -y
