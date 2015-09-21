@@ -26,7 +26,14 @@ GENTOO=gentoo
 CENTOS=centos
 UBUNTU=ubuntu
 
+function hostname_change {
+	echo "Enter hostname:"
+	read HOST_NAME
+	hostnamectl set-hostname $HOST_NAME
+}
+
 function fedo {						# if you use fedora
+	hostname_change
 	SOFT_LIST=$UNI_SOFT" "$DESK_LIST" "$RHEL_LIST
 	echo "somethink for fedora"
 	yum -y localinstall \
